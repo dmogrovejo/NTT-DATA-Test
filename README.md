@@ -3,7 +3,12 @@ Technical test
 
 Instalación:
 
-Restaure la Base de Datos BaseDatos.sql
+En caso de querer tener la base de datos fuera del contenedor Restaure la Base de Datos BaseDatos.sql 
+Debe asegurarse de tener unusuario con las credenciales:
+Usuario:test
+Clave:test
+
+Si no puede obviar este paso 
 
 Ejecute en un terminal 
 
