@@ -17,6 +17,6 @@ Importe en Postman el archivo documentation.json
 
 
 NOTA:
-Si desea obviar el paso anterior ya que el aplicativo cuenta con SWAGGER para la documentación del API, por lo que podemos acceder directamente a sus end Points
+Si desea obviar el paso anterior, Lo puede hacer ya que el aplicativo cuenta con SWAGGER para la documentación del API, por lo que podemos acceder directamente a sus end Points
 
 ![image](https://user-images.githubusercontent.com/38479147/208014405-b18c6d8c-4700-44e7-b9a2-a82536dcfe5b.png)
