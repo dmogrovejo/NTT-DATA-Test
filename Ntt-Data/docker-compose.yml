@@ -1,0 +1,24 @@
+services:
+  app:
+    image: 'ntt-data:latest'
+    build:
+      context: .
+    container_name: java-app
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/ntt-data
+      - SPRING_DATASOURCE_USERNAME=test
+      - SPRING_DATASOURCE_PASSWORD=test
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_SHOW_SQL=true
+    ports:
+      - 8080:8080
+          
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: db
+    environment:
+      - POSTGRES_DB=ntt-data
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test

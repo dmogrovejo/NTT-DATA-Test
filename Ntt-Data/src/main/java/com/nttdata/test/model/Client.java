@@ -7,8 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.TableGenerator;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * Entity that maps the Client table, which is used to manage clients
@@ -18,6 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ToString
 public class Client extends Person{
 
 	@Id
@@ -33,5 +36,6 @@ public class Client extends Person{
 	
 	@Column
 	private boolean status =  true;
-	
+
+
 }

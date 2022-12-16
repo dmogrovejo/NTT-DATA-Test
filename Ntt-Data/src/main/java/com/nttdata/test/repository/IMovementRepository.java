@@ -19,11 +19,11 @@ import com.nttdata.test.model.Movement;
 @Repository
 public interface IMovementRepository extends CrudRepository<Movement, String>{
 
-	@Query(value = "SELECT  SUM(VALUE) FROM BANK.MOVEMENT WHERE ACCOUNT_ID = :accountId", nativeQuery = true)
+	@Query(value = "SELECT  SUM(VALUE) FROM MOVEMENT WHERE ACCOUNT_ID = :accountId", nativeQuery = true)
 	public Optional<BigDecimal> getBalance(@Param("accountId") Long accountId);
 	
 	@Query(value = "SELECT SUM(ABS(VALUE)) "
-			+ "FROM BANK.MOVEMENT "
+			+ "FROM MOVEMENT "
 			+ " WHERE "
 			+ " ACCOUNT_ID = :accountId "
 			+ " AND MOVEMENT_TYPE='DEBITO' "
